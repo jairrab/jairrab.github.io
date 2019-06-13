@@ -37,9 +37,15 @@ Test #15= [MergeSort, BuiltInSort, QuickSortMiddle2, QuickSortMiddle, InsertionS
 0.825ms for BubbleSort, 1595.8% slower. 100.0% correct
 ```
 The tests are randomized and warm-up tests are added to eliminate testing order bias. The size of the array, the number of tests and warm-up tests can be configures in the test driver.
-
 # QuickSort
 ## Using end of array as pivot
+Best Case: The best case occurs when the partition process always picks the middle element as pivot. There are many resources on the internet that would give the math explanation for this, but at best case, the time complexisty for this is Θ(n*Log*n).
+
+Worst Case: The worst case occurs when the partition process always picks greatest or smallest element as pivot. The time complexity at this condition is Θ(n<sup>2</sup>)
+
+On a sorted or reverse sorted array, this type of sorting will be bad as you always end up picking the greatest or smallest element as pivot. One way to significantly reduce the chances of picking the extreme elements as pivot is to pick the middle or a random element as pivot as seen below.
+
+The memory overhead of running QuickSort is very small, and in general, it's space complexity is considered in-place (constant), meaning there's no increase in memory requirement as the size of the array grows.
 ~~~ kotlin
 class QuickSortEnd {
     fun sort(array: IntArray): IntArray {
@@ -156,5 +162,114 @@ class QuickSortRandom {
 
         throw Exception("Sorting error...")
     }
+}
+~~~
+# MergeSort
+Overall time complexity of Merge sort is O(n*Log*n). In worst case the runtime is also O(n*log*n). However, the space complexity of Merge sort is O(n), which means that this algorithm takes a lot of space and may slow down operations for the last data sets.
+~~~ kotlin
+class MergeSort {
+    fun sort(array: IntArray): IntArray {
+        split(array)
+        return array
+    }
+
+    private fun split(array: IntArray): IntArray {
+        val size = array.size
+
+        if (size == 1) return array
+
+        val mid = size / 2
+
+        val left = split(array.sliceArray(0 until mid))
+        val right = split(array.sliceArray(mid until size))
+
+        return mergeSort(array, left, right)
+    }
+
+    private fun mergeSort(array: IntArray, left: IntArray, right: IntArray): IntArray {
+        var j = 0
+        var k = 0
+
+        for (i in 0 until array.size) {
+            when {
+                k == right.size -> {
+                    array[i] = left[j]
+                    j++
+                }
+                j == left.size -> {
+                    array[i] = right[k]
+                    k++
+                }
+                left[j] < right[k] -> {
+                    array[i] = left[j]
+                    j++
+                }
+                else -> {
+                    array[i] = right[k]
+                    k++
+                }
+            }
+        }
+
+        return array
+    }
+}
+~~~
+# InsertionSort
+The best case input is an array that is already sorted. In this case insertion sort has a linear running time (i.e., O(n)).
+
+The simplest worst case input is an array sorted in reverse order. The set of all worst case inputs consists of all arrays where each element is the smallest or second-smallest of the elements before it. This gives insertion sort a quadratic running time (i.e., O(n<sup>2</sup>)).
+
+The average case is also quadratic, which makes insertion sort impractical for sorting large arrays. However, insertion sort is one of the fastest algorithms for sorting very small arrays, even faster than quicksort. The exact threshold must be determined experimentally and depends on the machine, but is commonly around ten.
+~~~ kotlin
+class InsertionSort {
+    fun sort(array: IntArray): IntArray {
+        for (i in 1 until array.size) {
+            if (array[i] < array[i - 1]) {
+                val temp = array[i]
+
+                for (j in i downTo 0) {
+                    if (j != 0 && array[j - 1] >= temp) {
+                        array[j] = array[j - 1]
+                    } else {
+                        array[j] = temp
+                        break
+                    }
+                }
+            }
+        }
+        return array
+    }
+}
+~~~
+# BubbleSort
+Bubble sort has a worst-case and average complexity of О(n<sup>2</sup>), where n is the number of items being sorted. Most practical sorting algorithms have substantially better worst-case or average complexity, often O(n*log*n). Even other О(n<sup>2</sup>) sorting algorithms, such as insertion sort, generally run faster than BubbleSort, and are no more complex. Therefore, bubble sort is not a practical sorting algorithm. BubbleSort is sometimes used to compare with other algorithms when the list is already sorted (best-case), since the complexity of BubbleSort is only O(n) in these cases.
+~~~ kotlin
+class BubbleSort {
+    fun sort(array: IntArray): IntArray {
+        sort(array, array.size - 1)
+        return array
+    }
+
+    private fun sort(array: IntArray, end: Int) {
+        if (end == 0) return
+
+        for (i in 0 until end) {
+            if (array[i] > array[i + 1]) {
+                swap(array, i, i + 1)
+            }
+        }
+
+        sort(array, end - 1)
+    }
+}
+~~~
+# Note:
+All the swap functions called above is a simple method to swap the elements at given position within an array:
+~~~ kotlin
+fun swap(array: IntArray, i: Int, j: Int) {
+    val swapTemp = array[i]
+    array[i] = array[j]
+    array[j] = swapTemp
 }
 ~~~
