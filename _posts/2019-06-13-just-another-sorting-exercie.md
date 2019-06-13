@@ -36,7 +36,7 @@ Test #15= [MergeSort, BuiltInSort, QuickSortMiddle2, QuickSortMiddle, InsertionS
 0.514ms for InsertionSort, 956.9% slower. 100.0% correct
 0.825ms for BubbleSort, 1595.8% slower. 100.0% correct
 ```
-The tests are randomized and warm-up tests are added to eliminate testing order bias. The size of the array, the number of tests and warm-up tests can be configures in the test driver.
+The tests are randomized and warm-up tests are added to eliminate testing order bias. The size of the array, the number of tests and warm-up tests can be configured in the test driver.
 # QuickSort
 ## Using end of array as pivot
 Best Case: The best case occurs when the partition process always picks the middle element as pivot. There are many resources on the internet that would give the math explanation for this, but at best case, the time complexisty for this is Θ(n*Log*n).
