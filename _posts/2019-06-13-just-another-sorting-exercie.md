@@ -5,7 +5,7 @@ date:   2019-06-13 09:00:00
 categories: [algorithm, kotlin]
 comments: true
 ---
-I've been doing some reviewing of time and space complexity analysis to assess diferrent ways of solving a problem. I decided to look at the age old ways of sorting an array of numbers. For this exercise, I have created a Github repository at [jairrab/KotlinSortingAlgorithmsExercise](https://github.com/jairrab/KotlinSortingAlgorithmsExercise). The code is written in Kotlin, so it was also an opportunity for me to update plenty of code resources available on the internet to the latest modern language trend.
+I've been doing some reviewing of time and space complexity analysis to assess diferrent ways of solving a problem. I decided to look at the age old ways of sorting an array of numbers. For this exercise, I have created a Github repository at [jairrab/KotlinSortingAlgorithmsExercise](https://github.com/jairrab/KotlinSortingAlgorithmsExercise). The code is written in Kotlin, so it was also an opportunity for me to update plenty of code resources available on the internet to Google's new official Android language.
 
 Running the test driver file at [SortingExercise.kt](https://github.com/jairrab/KotlinSortingAlgorithmsExercise/blob/master/testlibrary/src/main/java/com/jairrab/testlibrary/SortingExercise.kt) will yield the following type of result:
 ```
@@ -36,14 +36,14 @@ Test #15= [MergeSort, BuiltInSort, QuickSortMiddle2, QuickSortMiddle, InsertionS
 0.514ms for InsertionSort, 956.9% slower. 100.0% correct
 0.825ms for BubbleSort, 1595.8% slower. 100.0% correct
 ```
-The tests are randomized and warm-up tests are added to eliminate testing order bias. The size of the array, the number of tests and warm-up tests can be configures in the test driver.
+The tests are randomized and warm-up tests are added to eliminate testing order bias. The size of the array, the number of tests and warm-up tests can be configured in the test driver.
 # QuickSort
 ## Using end of array as pivot
-Best Case: The best case occurs when the partition process always picks the middle element as pivot. There are many resources on the internet that would give the math explanation for this, but at best case, the time complexisty for this is Θ(n*Log*n).
+Best Case: The best case occurs when the partition process always picks the middle number as pivot. There are many resources on the internet that would give the math explanation for this, but at best case, the time complexity for this is Θ(n*Log*n).
 
-Worst Case: The worst case occurs when the partition process always picks greatest or smallest element as pivot. The time complexity at this condition is Θ(n<sup>2</sup>)
+Worst Case: The worst case occurs when the partition process always picks greatest or smallest number as pivot. The time complexity at this condition is Θ(n<sup>2</sup>)
 
-On a sorted or reverse sorted array, this type of sorting will be bad as you always end up picking the greatest or smallest element as pivot. One way to significantly reduce the chances of picking the extreme elements as pivot is to pick the middle or a random element as pivot as seen below.
+On a sorted or reverse sorted array, this type of sorting will be bad as you always end up picking the greatest or smallest number as pivot. One way to significantly reduce the chances of picking the extreme elements as pivot is to pick the middle or a random element as pivot as seen below.
 
 The memory overhead of running QuickSort is very small, and in general, it's space complexity is considered in-place (constant), meaning there's no increase in memory requirement as the size of the array grows.
 ~~~ kotlin
