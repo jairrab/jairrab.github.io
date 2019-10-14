@@ -17,6 +17,8 @@ The app requirements are very basic, but my objective is not to come up with the
 * Highly testable
 * Uses the latest technology stack where applicable
 
+<!--more-->
+
 # App Overview/Features
 
 ![alt text](https://raw.githubusercontent.com/jairrab/MapboxApp/master/resources/images/app_screenshots.png)
