@@ -7,6 +7,8 @@ comments: true
 ---
 I've been doing some reviewing of time and space complexity analysis to assess diferrent ways of solving a problem. I decided to look at the age old ways of sorting an array of numbers. For this exercise, I have created a Github repository at [jairrab/KotlinSortingAlgorithmsExercise](https://github.com/jairrab/KotlinSortingAlgorithmsExercise). The code is written in Kotlin, so it was also an opportunity for me to update plenty of code resources available on the internet to Google's new official Android language.
 
+<!--more-->
+
 Running the test driver file at [SortingExercise.kt](https://github.com/jairrab/KotlinSortingAlgorithmsExercise/blob/master/testlibrary/src/main/java/com/jairrab/testlibrary/SortingExercise.kt) will yield the following type of result:
 ```
 Array size = 1000
