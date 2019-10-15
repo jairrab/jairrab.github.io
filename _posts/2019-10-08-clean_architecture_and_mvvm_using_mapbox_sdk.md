@@ -5,7 +5,7 @@ date:   2019-10-08 09:00:00
 categories: [mvvm, clean architecture, kotlin]
 comments: true
 ---
-A sample Android app that implements a MapBox map using *Clean Archecture* principles with *MVVM* design pattern. The full code is available at [jairrab/MapboxApp](https://github.com/jairrab/MapboxApp)
+A sample Android app that implements a MapBox map using *Clean Archecture* principles with *MVVM* design pattern. The full code is available at [jairrab/MapboxApp](https://github.com/jairrab/MapboxApp).
 # Technical Objectives
 The app requirements are very basic, but my objective is not to come up with the simplest/easiest implementation. Although seemingly over-engineered (and it is for this case), my objective was to design it with a modern architecture that is very compliant with a team development setting. Thus, I have set the following goals for the app
 * Adheres to *Clean Architecture* design principles
