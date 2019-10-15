@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MapBox-based app using Clean Archecture principles with MVVM-based UI layer"
-excerpt: "A sample Android app that implements a MapBox map using *Clean Archecture* principles with *MVVM* design pattern. The app requirements are very basic, but its objective is not to come up with the simplest/easiest implementation. Although seemingly over-engineered (and it is for this case), its goal was to design it with a modern multi-module architecture that is very compliant with a team development setting. The app adopts reactive and functional programming techniques. The key libraries used are Dagger 2, RxJava, Retrofit and Jetpack Architecture Components."
+excerpt: "A sample Android app that implements a MapBox map using Clean Archecture principles with MVVM design pattern. The app requirements are very basic, but its objective is not to come up with the simplest/easiest implementation. Although seemingly over-engineered (and it is for this case), its goal was to design it with a modern multi-module architecture that is very compliant with a team development setting. The app adopts reactive and functional programming techniques. The key libraries used are Dagger 2, RxJava, Retrofit and Jetpack Architecture Components."
 date:   2019-10-08 09:00:00
 categories: [mvvm, clean architecture, kotlin]
 comments: true
