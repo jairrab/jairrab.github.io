@@ -48,9 +48,9 @@ The main objective is to develop it using a modern architecture that is very com
 
 ## App Screenshots & Overview
 
-![alt text](res/images/screenshot_a.png)
+![alt text](https://raw.githubusercontent.com/jairrab/CurrencyExchangeApp/master/res/images/screenshot_a.png)
 
-![alt text](res/images/screenshot_b.png)
+![alt text](https://raw.githubusercontent.com/jairrab/CurrencyExchangeApp/master/res/images/screenshot_b.png)
 
 * Change currency by selecting a cell or clicking the currency button. (A)
 * The currency dialog offers a quick search functionality (B)
@@ -62,7 +62,7 @@ The main objective is to develop it using a modern architecture that is very com
 ## App Design
 The app architecture is organized into several layers, namely the presentation, domain, and the data layers.
 
-![alt text](res/images/app_layer_architecture.png)
+![alt text](https://raw.githubusercontent.com/jairrab/CurrencyExchangeApp/master/res/images/app_layer_architecture.png)
 
 * **Presentation**- contains the `View` and `Presentation` modules of the app. The view module contains the activities and fragments that are coordinated through the Presenter/ViewModel.
 * **Domain**- `Domain` module is at the core of our application, that contains the business logic. It should not depend on how the data will be presented or where the data is coming from, as such, this is the most inner part that has no dependencies to the outer layers. It defines *use cases* which declare operations that can be performed. 
