@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A multi-module currency exchange app built on the principles of clean architecture design."
+title:  "A multi-modular simple currency exchange app built on the principles of clean architecture design."
 excerpt: "The main objective is to develop it using a modern architecture that is very compliant with a team development setting.
 * Adheres to *Clean Architecture* design principles.
 * Maintainable, scalable and flexible (adaptable to future growth, modifications and new requirements).
