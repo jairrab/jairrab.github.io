@@ -13,7 +13,7 @@ comments: true
 ---
 # Currency Exchange App 
 
-A multi-module currency exchange app built on the principles of clean architecture design. Code is available for viewing at https://github.com/jairrab/CurrencyExchangeApp
+A multi-module currency exchange app built on the principles of clean architecture design. Code is available for viewing at  [https://github.com/jairrab/CurrencyExchangeApp](https://github.com/jairrab/CurrencyExchangeApp)
 
   * [Technical Goals](#technical-goals)
   * [App Screenshots & Overview](#app-screenshots---overview)
