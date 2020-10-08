@@ -128,4 +128,4 @@ I/CalculatorLog: Key: = | Entries: [12, +, 13, *, 2, =] | Result: 38.0
 ```
 The calculator is a pure Kotlin module library and does not have any Android dependency, thus you will need to provide a UI to call the and display the calculator functions. This makes the library lightweight and very flexible to suit your needs. Here's what a typical UI may look like displaying the above operations:
 ### UI Sample
-![alt text](calculator_ui_sample.png)
+![UI preview](https://raw.githubusercontent.com/jairrab/KotlinCalculator/master/calculator_ui_sample.png)
