@@ -2,7 +2,7 @@
 layout: post
 title:  "Calculator library built on Kotlin, compatible with Java projects. Pure Kotlin module, lightweight, very flexible."
 excerpt: "I've been browsing around Github looking for a pure calculator library that can be plugged-in to any UI design, free from Android platform specific libraries. To my surprise, all of the calculator libraries I've seen are highly coupled android libraries, built on top of dialog fragments. The goal of this library is to be completely decoupled from any UI framework, but still can be easily plugged-in to an existing user interface design. The library uses a linear scanning approach with a linear time complexity, which makes it ideal for long-running calculations."
-date:   2020-03-01 09:00:00
+date:   2020-10-01 09:00:00
 categories: [kotlin, library]
 comments: true
 ---
